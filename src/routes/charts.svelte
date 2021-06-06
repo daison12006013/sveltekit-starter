@@ -47,7 +47,7 @@
       <!-- Doughnut/Pie chart -->
       <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
         <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">Doughnut/Pie</h4>
-        <Pie data={pieConfig} />
+        <!-- <Pie data={pieConfig} /> -->
         <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
           <!-- Chart legend -->
           <div class="flex items-center">
@@ -67,7 +67,7 @@
       <!-- Lines chart -->
       <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
         <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">Lines</h4>
-        <Line data={lineConfig} />
+        <!-- <Line data={lineConfig} /> -->
         <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
           <!-- Chart legend -->
           <div class="flex items-center">
@@ -83,7 +83,7 @@
       <!-- Bars chart -->
       <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
         <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">Bars</h4>
-        <Bar data={barConfig} />
+        <!-- <Bar data={barConfig} /> -->
         <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
           <!-- Chart legend -->
           <div class="flex items-center">

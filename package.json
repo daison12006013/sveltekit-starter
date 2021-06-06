@@ -9,6 +9,7 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
+    "@sveltejs/adapter-vercel": "^1.0.0-next.22",
     "@sveltejs/kit": "next",
     "@tailwindcss/jit": "^0.1.18",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
@@ -30,7 +31,6 @@
   "dependencies": {
     "@fontsource/fira-mono": "^4.2.2",
     "@lukeed/uuid": "^2.0.0",
-    "@sveltejs/adapter-vercel": "next",
     "cookie": "^0.4.1",
     "svelte-chartjs": "^1.0.1"
   }
