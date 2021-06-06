@@ -14,6 +14,7 @@ const config = {
       resolve: {
         alias: {
           $stores: resolve('./src/stores'),
+          $assets: resolve('./src/assets'),
         },
       },
     },
