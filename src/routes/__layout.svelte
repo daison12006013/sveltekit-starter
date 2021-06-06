@@ -1,18 +1,13 @@
 <script lang="ts">
-  // export const prerender = false
-
   import '../tailwind.css'
   import { isSideMenuOpen, closeSideMenu } from '$stores/menus'
   import { clickOutside } from '$lib/IOEvents/clickOutside'
   import { keydownEscape } from '$lib/IOEvents/keydownEscape'
   import SideBar from '$lib/Components/Admin/SideBar.svelte'
   import Header from '$lib/Components/Admin/Header.svelte'
-
-  const rands = ['', 'dark']
-  const randCls = rands[Math.floor(Math.random() * rands.length)]
 </script>
 
-<section id="body" class={randCls}>
+<section id="body" class="dark">
   <div class="flex h-screen bg-gray-50 dark:bg-gray-900" class:overflow-hidden={$isSideMenuOpen}>
     <!-- Desktop sidebar -->
     <aside
