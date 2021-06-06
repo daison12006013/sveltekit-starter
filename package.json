@@ -30,7 +30,7 @@
   "dependencies": {
     "@fontsource/fira-mono": "^4.2.2",
     "@lukeed/uuid": "^2.0.0",
-    "@sveltejs/adapter-vercel": "^1.0.0-next.22",
+    "@sveltejs/adapter-vercel": "next",
     "cookie": "^0.4.1",
     "svelte-chartjs": "^1.0.1"
   }
