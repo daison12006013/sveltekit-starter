@@ -2,6 +2,8 @@
 
 This is made possible and most of the design was based from [Estevan Maito's](https://github.com/estevanmaito/windmill-dashboard) project.
 
+[LIVE DEMO](https://sveltekit-windmill-admin.vercel.app/)
+
 ## Prologue
 
 - [SvelteKit](https://github.com/sveltejs/kit)
