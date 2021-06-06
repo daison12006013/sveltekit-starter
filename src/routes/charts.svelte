@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { barConfig, lineConfig, pieConfig } from '$assets/js/charts'
-  import Bar from 'svelte-chartjs/src/Bar.svelte'
-  import Line from 'svelte-chartjs/src/Line.svelte'
-  import Pie from 'svelte-chartjs/src/Pie.svelte'
+  // import { barConfig, lineConfig, pieConfig } from '$assets/js/charts'
+  // import Bar from 'svelte-chartjs/src/Bar.svelte'
+  // import Line from 'svelte-chartjs/src/Line.svelte'
+  // import Pie from 'svelte-chartjs/src/Pie.svelte'
 
   import _i from '$lib/translator'
 </script>
