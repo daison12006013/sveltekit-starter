@@ -1,6 +1,12 @@
 <script lang="ts">
-  import { pageMenus, togglePageMenu } from '$stores/menus'
+  import { closeSideMenu, pageMenus, togglePageMenu } from '$stores/menus'
   import { page } from '$app/stores'
+  import { goto } from '$app/navigation'
+
+  const changeUrl = (url: string) => {
+    closeSideMenu()
+    goto(url)
+  }
 
   const links = [
     {
@@ -91,6 +97,10 @@
             class:text-gray-800={activeMenu == link.url}
             class:dark:text-gray-100={activeMenu == link.url}
             href={link.url}
+            on:click={(e) => {
+              e.preventDefault()
+              changeUrl(link.url)
+            }}
           >
             <svg
               class="w-5 h-5"

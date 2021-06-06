@@ -22,6 +22,7 @@
   >
     <!-- Mobile hamburger -->
     <button
+      id="nav-mobile-hamburger"
       class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple"
       on:click={toggleSideMenu}
       aria-label="Menu"
@@ -84,6 +85,7 @@
         <!-- Notifications menu -->
         <li class="relative">
           <button
+            id="nav-notification-btn"
             class="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple"
             on:click={toggleNotificationsMenu}
             use:keydownEscape
@@ -104,7 +106,7 @@
           </button>
           {#if $isNotificationsMenuOpen}
             <ul
-              use:clickOutside
+              use:clickOutside={['nav-notification-btn']}
               on:click-outside={closeNotificationsMenu}
               use:keydownEscape
               on:keydown-escape={closeNotificationsMenu}
@@ -150,6 +152,7 @@
         <!-- Profile menu -->
         <li class="relative">
           <button
+            id="nav-profile-photo"
             class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none"
             on:click={toggleProfileMenu}
             use:keydownEscape
@@ -166,7 +169,7 @@
           </button>
           {#if $isProfileMenuOpen}
             <ul
-              use:clickOutside
+              use:clickOutside={['nav-profile-photo']}
               on:click-outside={closeProfileMenu}
               use:keydownEscape
               on:keydown-escape={closeProfileMenu}

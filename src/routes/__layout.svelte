@@ -24,7 +24,7 @@
       />
       <aside
         class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden"
-        use:clickOutside
+        use:clickOutside={['nav-mobile-hamburger']}
         on:click-outside={closeSideMenu}
         use:keydownEscape
         on:keydown-escape={closeSideMenu}
