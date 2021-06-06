@@ -11,6 +11,11 @@
       ],
     },
     {
+      name: 'TODOs',
+      url: '/todos',
+      svg: ['M4 6h16M4 10h16M4 14h16M4 18h16'],
+    },
+    {
       name: 'Forms',
       url: '/forms',
       svg: [
@@ -61,8 +66,10 @@
     },
   ]
 
-  const matchesUrlPath = (val: string) => {
-    return val === $page.path
+  let activeMenu = $page.path
+
+  $: if ($page.path) {
+    activeMenu = $page.path
   }
 </script>
 
@@ -71,7 +78,7 @@
   <ul class="mt-6">
     {#each links as link, a}
       <li class="relative px-6 py-3">
-        {#if matchesUrlPath(link.url)}
+        {#if activeMenu == link.url}
           <span
             class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
             aria-hidden="true"
@@ -81,8 +88,8 @@
         {#if !link.sublinks}
           <a
             class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-            class:text-gray-800={matchesUrlPath(link.url)}
-            class:dark:text-gray-100={matchesUrlPath(link.url)}
+            class:text-gray-800={activeMenu == link.url}
+            class:dark:text-gray-100={activeMenu == link.url}
             href={link.url}
           >
             <svg
