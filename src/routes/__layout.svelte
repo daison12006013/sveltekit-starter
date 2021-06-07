@@ -3,8 +3,8 @@
   import { isSideMenuOpen, closeSideMenu } from '$stores/menus'
   import { clickOutside } from '$lib/IOEvents/clickOutside'
   import { keydownEscape } from '$lib/IOEvents/keydownEscape'
-  import SideBar from '$lib/Components/Admin/SideBar.svelte'
-  import Header from '$lib/Components/Admin/Header.svelte'
+  import SideBar from '$lib/Templates/Admin/SideBar.svelte'
+  import Header from '$lib/Templates/Admin/Header.svelte'
 </script>
 
 <section id="body" class="dark">

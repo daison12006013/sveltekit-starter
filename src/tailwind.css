@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.theme-dark .dark:hover:bg-gray-800:hover {
+  --bg-opacity: 1;
+  background-color: #1a1c23;
+  background-color: rgba(26, 28, 35, var(--bg-opacity));
+}
+
+.theme-dark .dark:hover:text-gray-200:hover {
+  --text-opacity: 1;
+  color: #e5e7eb;
+  color: rgba(229, 231, 235, var(--text-opacity));
+}

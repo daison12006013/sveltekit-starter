@@ -67,7 +67,7 @@
         { name: 'Login', url: '/pages/login' },
         { name: 'Create account', url: '/pages/create-account' },
         { name: 'Forgot password', url: '/pages/forgot-password' },
-        { name: '404', url: '/404' },
+        { name: '404', url: '/this-page-does-not-exists-at-all' },
       ],
     },
   ]

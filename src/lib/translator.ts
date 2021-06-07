@@ -34,7 +34,7 @@ export const trans = (text: string, replacers?: any, strict = false): string => 
   if (replacers !== undefined) {
     Object.keys(replacers).forEach((idx) => {
       resp = resp.replace(`:${idx}`, replacers[idx]) // Laravel like translations...
-      resp = resp.replace(`{${idx}}`, replacers[idx]) // I have no idea...
+      resp = resp.replace(`{${idx}}`, replacers[idx]) // maybe uses curly braces? "My {text} whatever"
     })
   }
 
