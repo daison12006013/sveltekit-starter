@@ -25,7 +25,8 @@
 		"paths": {
 			"$lib/*": ["src/lib/*"],
 			"$stores/*": ["src/stores/*"],
-			"$assets/*": ["src/assets/*"]
+			"$assets/*": ["src/assets/*"],
+			"$icon/*": ["node_modules/svelte-bootstrap-icons/lib/*"]
 		}
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]

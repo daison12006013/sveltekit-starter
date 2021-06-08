@@ -17,6 +17,7 @@ const config = {
         alias: {
           $stores: resolve('./src/stores'),
           $assets: resolve('./src/assets'),
+          $icon: resolve('./node_modules/svelte-bootstrap-icons/lib'),
         },
       },
     },

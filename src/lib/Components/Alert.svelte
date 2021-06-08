@@ -2,15 +2,15 @@
   export let type = 'primary'
   export let isRounded = true
   export let roundedSize = 'md'
-  export let padding = 'py-4 px-3'
-  export let append = ''
+  export let append = 'py-4 px-3'
+  export let message = `A simple ${type} alert - check it out!`
 
   let color = ''
   let rounded = ''
 
   // reactive
 
-  $: padding
+  $: append
 
   $: if (isRounded && roundedSize) {
     rounded = `rounded-${roundedSize}`
@@ -44,4 +44,4 @@
   }
 </script>
 
-<div class="{padding} {color} {rounded} {append}">A simple {type} alert - check it out!</div>
+<div class="{color} {rounded} {append}">{message}</div>
