@@ -19,9 +19,36 @@
   import Tooltips from '$lib/Components/Tooltips.svelte'
 </script>
 
+<svelte:head>
+  <title>Components</title>
+</svelte:head>
+
 <div class="container px-6 mx-auto grid">
-  <Accordion />
-  <Alert />
+  <div class="pb-5">
+    <span class="text-xl">Accordion</span>
+    <Accordion />
+  </div>
+  <div class="pb-5">
+    <span class="text-xl">Alerts</span>
+    <Alert append="mt-2" type="primary" />
+    <Alert append="mt-2" type="secondary" />
+    <Alert append="mt-2" type="success" />
+    <Alert append="mt-2" type="danger" />
+    <Alert append="mt-2" type="warning" />
+    <Alert append="mt-2" type="info" />
+    <Alert append="mt-2" type="light" />
+    <Alert append="mt-2" type="dark" />
+
+    <hr />
+
+    <div class="mt-5">&#42; Square</div>
+    <Alert type="dark" isRounded={false} />
+    <div class="mt-5">&#42; Small Rounded Corner</div>
+    <Alert type="dark" isRounded={true} roundedSize="sm" />
+    <div class="mt-5">&#42; Large Rounded Corner</div>
+    <Alert type="dark" isRounded={true} roundedSize="lg" />
+  </div>
+
   <Badge />
   <Breadcrumb />
   <ButtonGroup />

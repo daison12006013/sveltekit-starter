@@ -1,4 +1,6 @@
 <script lang="ts">
+  export let append = ''
+
   // export the data
   export let data = [
     {
@@ -25,7 +27,7 @@
   $: data
 </script>
 
-<div class="accordion">
+<div class="accordion {append}">
   {#each data as datum, i}
     <div class="accordion-item">
       <h2 class="accordion-header">
