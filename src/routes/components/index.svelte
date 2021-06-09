@@ -1,12 +1,13 @@
 <script lang="ts">
-  import Accordion from '$lib/Components/Accordion.svelte'
-  import Alert from '$lib/Components/Alert.svelte'
-  import Badge from '$lib/Components/Badge.svelte'
+  import DocAccordion from '$lib/Components/Docs/DocAccordion.svelte'
+  import DocAlert from '$lib/Components/Docs/DocAlert.svelte'
+  import DocBadge from '$lib/Components/Docs/DocBadge.svelte'
   import Breadcrumb from '$lib/Components/Breadcrumb.svelte'
   import ButtonGroup from '$lib/Components/ButtonGroup.svelte'
   import Card from '$lib/Components/Card.svelte'
   import Carousel from '$lib/Components/Carousel.svelte'
   import CloseButton from '$lib/Components/CloseButton.svelte'
+  import Code from '$lib/Components/Code.svelte'
   import Collapse from '$lib/Components/Collapse.svelte'
   import Dropdowns from '$lib/Components/Dropdowns.svelte'
   import ListGroup from '$lib/Components/ListGroup.svelte'
@@ -18,7 +19,9 @@
   import Toasts from '$lib/Components/Toasts.svelte'
   import Tooltips from '$lib/Components/Tooltips.svelte'
 
-  import { isDark, toggleTheme } from '$stores/menus'
+  const showScript = (elem: string) => {
+    console.log(document.getElementById(elem).innerHTML)
+  }
 </script>
 
 <svelte:head>
@@ -29,23 +32,23 @@
   <div class="bg-gray-50 dark:bg-gray-900 dark:text-white">
     <div class="container px-6 mx-auto grid">
       <div class="mt-5 pb-5">
-        <span class="text-xl">Accordion</span>
-        <Accordion type="danger" />
+        <DocAccordion />
       </div>
+
+      <hr />
 
       <div class="pb-5">
-        <span class="text-xl">Alerts</span>
-        <Alert type="primary" />
-        <Alert type="secondary" />
-        <Alert type="success" />
-        <Alert type="danger" />
-        <Alert type="warning" />
-        <Alert type="info" />
-        <Alert type="light" />
-        <Alert type="dark" />
+        <DocAlert />
       </div>
 
-      <Badge />
+      <hr />
+
+      <div class="pb-5">
+        <DocBadge />
+      </div>
+
+      <hr />
+
       <Breadcrumb />
       <ButtonGroup />
       <Card />
@@ -64,3 +67,11 @@
     </div>
   </div>
 </main>
+
+<style>
+  hr {
+    @apply border;
+    @apply text-gray-500;
+    @apply m-10;
+  }
+</style>

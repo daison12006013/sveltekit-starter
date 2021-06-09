@@ -1,6 +1,6 @@
 <script lang="ts">
   export let type = 'primary'
-  export let message = `A simple ${type} alert - check it out!`
+  export let body = `A simple ${type} alert - check it out!`
 
   let color = ''
 
@@ -37,5 +37,5 @@
 <div
   class="flex items-center justify-between p-4 mb-8 text-sm font-semibold rounded-lg shadow-md focus:outline-none {color}"
 >
-  {message}
+  {body}
 </div>
