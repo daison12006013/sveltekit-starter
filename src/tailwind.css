@@ -13,3 +13,35 @@
   color: #e5e7eb;
   color: rgba(229, 231, 235, var(--text-opacity));
 }
+
+.primary {
+  @apply text-purple-100 bg-purple-600;
+}
+
+.secondary {
+  @apply text-gray-100 bg-gray-500;
+}
+
+.success {
+  @apply text-green-100 bg-green-600;
+}
+
+.danger {
+  @apply text-red-100 bg-red-600;
+}
+
+.warning {
+  @apply text-orange-100 bg-orange-600;
+}
+
+.info {
+  @apply text-blue-100 bg-blue-600;
+}
+
+.light {
+  @apply text-gray-700 bg-white;
+}
+
+.dark {
+  @apply text-gray-100 bg-gray-700;
+}

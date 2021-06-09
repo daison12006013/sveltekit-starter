@@ -1,47 +1,41 @@
 <script lang="ts">
   export let type = 'primary'
-  export let isRounded = true
-  export let roundedSize = 'md'
-  export let append = 'py-4 px-3'
   export let message = `A simple ${type} alert - check it out!`
 
   let color = ''
-  let rounded = ''
 
   // reactive
 
-  $: append
-
-  $: if (isRounded && roundedSize) {
-    rounded = `rounded-${roundedSize}`
-  }
-
   $: switch (type) {
     case 'primary':
-      color = 'bg-blue-400 text-blue-900'
+      color = 'primary focus:shadow-outline-purple'
       break
     case 'secondary':
-      color = 'bg-gray-200 text-gray-700'
+      color = 'secondary focus:shadow-outline-gray'
       break
     case 'success':
-      color = 'bg-green-400 text-green-900'
+      color = 'success focus:shadow-outline-green'
       break
     case 'danger':
-      color = 'bg-red-500 text-red-900'
+      color = 'danger focus:shadow-outline-red'
       break
     case 'warning':
-      color = 'bg-orange-400 text-orange-800'
+      color = 'warning focus:shadow-outline-orange'
       break
     case 'info':
-      color = 'bg-blue-200'
+      color = 'info focus:shadow-outline-blue'
       break
     case 'light':
-      color = 'bg-gray-100'
+      color = 'light focus:shadow-outline-white'
       break
     case 'dark':
-      color = 'bg-gray-800 text-white'
+      color = 'dark focus:shadow-outline-gray'
       break
   }
 </script>
 
-<div class="{color} {rounded} {append}">{message}</div>
+<div
+  class="flex items-center justify-between p-4 mb-8 text-sm font-semibold rounded-lg shadow-md focus:outline-none {color}"
+>
+  {message}
+</div>

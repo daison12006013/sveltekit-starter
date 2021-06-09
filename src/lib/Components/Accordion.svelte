@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { fade, fly } from 'svelte/transition'
   import ChevronUp from '$icon/ChevronUp/ChevronUp.svelte'
   import ChevronDown from '$icon/ChevronDown/ChevronDown.svelte'
 
@@ -24,17 +25,19 @@
     },
   ]
 
+  export let type = 'primary'
+
   // make the data reactive!
   $: data
+  $: type
 </script>
 
-<div class="border rounded-md">
+<div class="border dark:border-gray-600 rounded-md">
   {#each data as datum, i}
-    <div class:border-b={data.length !== i + 1}>
+    <div class={data.length !== i + 1 && 'border-b border-gray-600'}>
       <button
-        class="w-full py-3 px-6 focus:outline-none"
-        class:border-b={datum.show}
-        class:bg-blue-100={datum.show}
+        class="w-full px-4 py-3 text-sm font-semibold focus:outline-none {datum.show &&
+          `border-b dark:border-gray-600 ${type}`}"
         type="button"
         on:click={() => {
           datum.show = !datum.show
@@ -49,7 +52,11 @@
           {/if}
         </div>
       </button>
-      <div class="py-3 px-6" class:hidden={!datum.show}>{datum.body}</div>
+      {#if datum.show}
+        <div transition:fly={{ duration: 50 }} class="py-3 px-6">
+          {datum.body}
+        </div>
+      {/if}
     </div>
   {/each}
 </div>
