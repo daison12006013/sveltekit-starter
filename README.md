@@ -15,8 +15,8 @@ npm run dev -- --open
 ## In Progress
 
 - Separated templates
- - [] Landing Pages
- - [x] Admin
+    - [ ] Landing Pages
+    - [x] Admin
 - Separated components (inputs / tables, etc.)
 - Cypress Testing
 - (buggy as of the moment) Chart.JS
