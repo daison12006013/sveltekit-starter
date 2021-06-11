@@ -1,5 +1,5 @@
 <script lang="ts">
-  import '../tailwind.css'
+  import '$src/tailwind.css'
   import { isSideMenuOpen, closeSideMenu } from '$stores/menus'
   import { clickOutside } from '$lib/IOEvents/clickOutside'
   import { keydownEscape } from '$lib/IOEvents/keydownEscape'

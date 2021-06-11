@@ -2,8 +2,10 @@
   "name": "~TODO~",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "dev": "ROUTE_FOLDER=admin svelte-kit dev",
+    "dev-landing": "ROUTE_FOLDER=landing svelte-kit dev",
+    "build": "ROUTE_FOLDER=admin svelte-kit build",
+    "build-landing": "ROUTE_FOLDER=landing svelte-kit build",
     "preview": "svelte-kit preview",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. ."
