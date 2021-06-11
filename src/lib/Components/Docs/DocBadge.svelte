@@ -18,7 +18,7 @@
 
 <h3 class="text-sm mt-2">Example:</h3>
 <Code language="svelte">
-  {'<!-- The `type` can be (primary, secondary, success, danger, warning, info, light, dark -->'}<br
-  /><br />
-  {'<Badge type="primary" body="Hello World!" />'}
+  {"import Badge from '$lib/Components/Badge.svelte'"}<br /><br />
+  {'<Badge type="warning" body="Hello World!" />'}<br />
+  {'<Badge type="success">This is a badge</Badge>'}
 </Code>
