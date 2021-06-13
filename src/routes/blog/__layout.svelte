@@ -10,7 +10,7 @@
   // Particles JS
   // ------------------------------------------------------------
   import { onMount } from 'svelte'
-  import particlesConfig from '$assets/vendor/particle.json'
+  import particlesConfig from '$lib/Templates/Blog/Config/particle.json'
   let ParticlesComponent: any
 
   onMount(async () => {

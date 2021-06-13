@@ -1,5 +1,5 @@
 <script lang="ts">
-  // import { barConfig, lineConfig, pieConfig } from '$assets/js/charts'
+  // import { barConfig, lineConfig, pieConfig } from '$lib/Templates/Admin/Config/charts'
   // import Bar from 'svelte-chartjs/src/Bar.svelte'
   // import Line from 'svelte-chartjs/src/Line.svelte'
   // import Pie from 'svelte-chartjs/src/Pie.svelte'

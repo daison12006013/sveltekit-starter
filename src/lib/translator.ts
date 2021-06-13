@@ -1,5 +1,3 @@
-import assetTrans from '$assets/translations'
-
 const getLang = (): string => {
   // well, maybe base the language from
   // -> where the guest coming from? via API to determine their IP Address
@@ -12,9 +10,16 @@ const getLang = (): string => {
 
 const getData = (lang: string) => {
   // ofcourse get the data via api, below is just a sample!
-  // cache this one as well
 
-  return assetTrans[lang]
+  const data = {
+    en: {
+      Dashboard: 'Dashboard',
+      'Lorem :ipsum whatever': ':ipsum Lorem Sikador',
+      'Lorem {ipsum} whatever': '{ipsum} Lorem Sikador',
+    },
+  }
+
+  return data[lang]
 }
 
 export const trans = (text: string, replacers?: any, strict = false): string => {
