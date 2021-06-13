@@ -94,23 +94,23 @@
     <div class="">
       <div class="flex flex-wrap justify-center mt-5">
         <img
-          class="h-24 w-auto bg-white p-3 m-3 rounded-lg"
+          class="h-16 2xl:h-24 w-auto bg-white p-3 m-3 rounded-lg"
           src="http://mamemimommy.com/wp-content/uploads/2015/01/Pilipinas-Teleserv-logo-2014-black.png"
           alt="Pilipinas Teleserv Inc."
         />
         <img
           style="background-color: #112761;"
-          class="h-24 w-auto p-3 m-3 rounded-lg"
+          class="h-16 2xl:h-24 w-auto p-3 m-3 rounded-lg"
           src="https://files.vroomvroomvroom.com/cms/us/logo.svg"
           alt="VroomVroomVroom Pty. Ltd."
         />
         <img
-          class="h-24 w-auto bg-white p-3 m-3 rounded-lg"
+          class="h-16 2xl:h-24 w-auto bg-white p-3 m-3 rounded-lg"
           src="https://plus65.com.sg/images/Plus65.png"
           alt="Plus65 Pte. Ltd."
         />
         <img
-          class="h-24 w-auto bg-gray-900 p-3 m-3 rounded-lg"
+          class="h-16 2xl:h-24 w-auto bg-gray-900 p-3 m-3 rounded-lg"
           src={incube8Img}
           alt="Incube8 Pte. Ltd."
         />
