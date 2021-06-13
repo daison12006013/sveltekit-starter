@@ -89,7 +89,7 @@
     </h1>
     <p class="text-sm">Lists of companies that I worked in the past and current.</p>
     <div class="">
-      <div class="flex items-center justify-center mt-5">
+      <div class="flex flex-wrap justify-center mt-5">
         <img
           class="h-24 w-auto bg-white p-3 m-3 rounded-lg"
           src="http://mamemimommy.com/wp-content/uploads/2015/01/Pilipinas-Teleserv-logo-2014-black.png"
@@ -113,8 +113,10 @@
         />
       </div>
 
-      <div class="text-left inline-block bg-gray-200 text-gray-900 py-1 px-3 rounded-sm">
-        <p>These companies, it seems unreachable / down website</p>
+      <div
+        class="text-left inline-block bg-gray-200 text-gray-900 mx-2 md:mx-0 py-1 px-3 rounded-sm"
+      >
+        <p>These companies may seem to be unreachable / down website</p>
         <ul class="list-disc pl-10 text-sm">
           <li>Samjang Tech</li>
           <li>Olive Drab Global Services</li>
