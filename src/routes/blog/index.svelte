@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Alert from '$lib/Components/Alert.svelte'
   import ChevronBarExpand from '$icon/ChevronBarExpand/ChevronBarExpand.svelte'
   import Building from '$icon/Building/Building.svelte'
   import CardList from '$icon/CardList/CardList.svelte'
+  import GitHub from '$icon/GitHub/GitHub.svelte'
 </script>
 
 <div class="container mx-auto">
@@ -132,7 +132,14 @@
       <span class="inline-block"><CardList width="30" height="30" /></span>
       Projects
     </h1>
-    <p class="text-sm">Lists of the projects that I've worked out.</p>
-    <div />
+    <p class="text-sm">Lists of projects that I've worked out.</p>
+    <div>TODO...</div>
+
+    <h1 class="text-5xl font-bold tracking-widest italic mt-5">
+      <span class="inline-block"><GitHub width="30" height="30" /></span>
+      Open Source
+    </h1>
+    <p class="text-sm">Lists of opensource I am contributing with.</p>
+    <div>TODO...</div>
   </div>
 </div>
