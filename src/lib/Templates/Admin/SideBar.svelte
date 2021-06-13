@@ -8,7 +8,14 @@
     goto(url)
   }
 
-  const links = [
+  let activeMenu = $page.path
+
+  $: if ($page.path) {
+    activeMenu = $page.path
+  }
+
+  export let withTitle = true
+  export let links = [
     {
       name: 'Dashboard',
       url: '/',
@@ -71,16 +78,12 @@
       ],
     },
   ]
-
-  let activeMenu = $page.path
-
-  $: if ($page.path) {
-    activeMenu = $page.path
-  }
 </script>
 
 <div class="py-4 text-gray-500 dark:text-gray-400">
-  <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="/"> Windmill </a>
+  {#if withTitle}
+    <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="/"> Windmill </a>
+  {/if}
   <ul class="mt-6">
     {#each links as link, a}
       <li class="relative px-6 py-3">
@@ -102,20 +105,22 @@
               changeUrl(link.url)
             }}
           >
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {#each link.svg as s, b}
-                <path d={s} />
-              {/each}
-            </svg>
+            {#if link.svg}
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {#each link.svg as s, b}
+                  <path d={s} />
+                {/each}
+              </svg>
+            {/if}
             <span class="ml-4">{link.name}</span>
           </a>
         {:else}

@@ -4,6 +4,10 @@ module.exports = {
   purge: ['src/app.html', 'src/**/*.svelte'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
+    fontSize: {
+      ...defaultTheme.fontSize,
+      '10xl': '10rem',
+    },
     themeVariants: ['dark'],
     customForms: (theme) => ({
       default: {
@@ -165,7 +169,7 @@ module.exports = {
         xl: '36rem',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter', 'Montserrat', ...defaultTheme.fontFamily.sans],
       },
     },
   },

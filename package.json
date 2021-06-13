@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "ROUTE_FOLDER=admin svelte-kit dev",
+    "dev-blog": "ROUTE_FOLDER=blog svelte-kit dev",
     "dev-landing": "ROUTE_FOLDER=landing svelte-kit dev",
     "build": "ROUTE_FOLDER=admin svelte-kit build",
+    "build-blog": "ROUTE_FOLDER=blog svelte-kit build",
     "build-landing": "ROUTE_FOLDER=landing svelte-kit build",
     "preview": "svelte-kit preview",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
@@ -35,6 +37,7 @@
     "@fontsource/fira-mono": "^4.2.2",
     "@lukeed/uuid": "^2.0.0",
     "cookie": "^0.4.1",
-    "svelte-chartjs": "^1.0.1"
+    "svelte-chartjs": "^1.0.1",
+    "svelte-particles": "^1.11.0"
   }
 }
