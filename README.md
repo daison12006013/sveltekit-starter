@@ -1,6 +1,4 @@
-[LIVE DEMO](https://sveltekit-windmill-admin.vercel.app/)
-
-# Windmill for SvelteKit
+# SvelteKit Projects
 
 This project contains the lists of tools used
 
@@ -8,9 +6,20 @@ This project contains the lists of tools used
 - [TailwindCSS](https://tailwindcss.com/)
 - [Vite](https://vitejs.dev/)
 
+## DEMO
+
+- [Admin](https://sveltekit-windmill-admin.vercel.app/)
+- [Blog / Personal Site](https://daison.vercel.app/)
+- Landing Page Demo (In Progress)
+
 ## Start the server and open the app in a new browser tab
 
-npm run dev -- --open
+- To build only for admin
+  - npm run dev
+- To build the blog sample
+  - npm run dev-blog
+- To build sample landing page (IN PROGRESS)
+  - npm run dev-landing
 
 ## In Progress
 

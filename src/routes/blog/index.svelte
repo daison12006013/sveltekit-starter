@@ -3,10 +3,10 @@
   import Building from '$icon/Building/Building.svelte'
   import CardList from '$icon/CardList/CardList.svelte'
 
-  import pilipinasTeleservImg from '$lib/Templates/Admin/Images/company1.png'
-  import vroom3Img from '$lib/Templates/Admin/Images/company2.svg'
-  import plus65Img from '$lib/Templates/Admin/Images/company3.png'
-  import incube8Img from '$lib/Templates/Admin/Images/company4.jpeg'
+  import pilipinasTeleservImg from '$lib/Templates/Blog/Images/company1.png'
+  import vroom3Img from '$lib/Templates/Blog/Images/company2.svg'
+  import plus65Img from '$lib/Templates/Blog/Images/company3.png'
+  import incube8Img from '$lib/Templates/Blog/Images/company4.jpeg'
 </script>
 
 <div class="container mx-auto">
