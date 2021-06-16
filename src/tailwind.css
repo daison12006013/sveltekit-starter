@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bg-blog {
-  background-color: #be1656;
+  @apply bg-blue-500;
 }
 
 .primary {

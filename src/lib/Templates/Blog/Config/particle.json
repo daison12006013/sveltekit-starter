@@ -54,14 +54,14 @@
     },
     "move": {
       "enable": true,
-      "speed": 0.3,
+      "speed": 0.5,
       "direction": "top-right",
       "random": true,
       "straight": false,
       "out_mode": "out",
       "bounce": false,
       "attract": {
-        "enable": false,
+        "enable": true,
         "rotateX": 600,
         "rotateY": 1200
       }

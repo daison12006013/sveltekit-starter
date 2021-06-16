@@ -1,6 +1,20 @@
-<div class="absolute mt-20 w-full">
+<script>
+  import Badge from '$lib/Components/Badge.svelte'
+  import Info from '$icon/Info/Info.svelte'
+</script>
+
+<div class="absolute w-full font-extralight">
   <div class="container mx-auto">
-    <div class="p-10 rounded-md bg-white bg-opacity-90 text-gray-900">
+    <div
+      id="resume"
+      class="p-10 rounded-md bg-white bg-opacity-90 text-black
+        mx-2 lg:mx-7 xl:mx-10 2xl:mx-0
+        my-20 2xl:my-40
+        print:my-10
+        print:mx-5
+        print:bg-opacity-80
+      "
+    >
       <div>
         <h3 class="text-4xl">Daison Cariño</h3>
         <p class="text-sm">
@@ -12,121 +26,110 @@
             >https://www.linkedin.com/in/daison-carino-56319471</a
           >
         </p>
-        <h4 class="mt-5 font-bold">Objectives</h4>
+        <h4 class="mt-5 font-normal">Objectives</h4>
         <p>
           Enthusiasts to any I.T. related jobs most probably software or web development; an
           opportunity to help the company to become more productive and efficient. I’m here to apply
           my expertise, skills and knowledge. I’m able to work individually or to work as a team to
           achieve the company’s goals.
         </p>
-        <h4 class="mt-5 font-bold">Areas of Expertise</h4>
+        <h4 class="mt-5 font-normal">Areas of Expertise</h4>
         <ul class="list-disc pl-10">
-          <li>Web development and Security enthusiast</li>
-          <li>Database design and Data analyst.</li>
-          <li>Network and Server management</li>
+          <li>Open Source Enthusiasts</li>
+          <li>Leading a Team or Project</li>
+          <li>Analysis, Design and Implementations</li>
+          <li>Coding Structures & Designs</li>
+          <li>Scrum Management</li>
         </ul>
-        <h4 class="mt-5 font-bold">Technical Skills:</h4>
-        <h5 class="mt-1 font-bold">Software Development</h5>
-        <p><strong>Managing a Team Experience:</strong></p>
+        <h4 class="mt-5 font-normal">Programming / Scripting Languages</h4>
         <ul class="list-disc pl-10">
-          <li>Collaborating with the best idea what the team could argue or share</li>
-          <li>Weekly sprint planning and able to manage a team’s task and discuss roadblocks</li>
-          <li>Balancing the work load of the whole team</li>
+          <li>NodeJS (w/ Serverless | AWS Lambda experience)</li>
+          <li>PHP</li>
+          <li>GoLang</li>
+          <li>S|CSS / Tailwind / Bulma / Bootstrap</li>
+          <li>ReactJS / VueJS / (Sapper | SvelteKit)</li>
+          <ul class="list-disc pl-5">
+            <li class="text-xs font-italic">Most of the time exploring SvelteKit</li>
+          </ul>
         </ul>
-        <p><strong>Backend Experience:</strong></p>
+
+        <h4 class="mt-5 font-normal">Work History</h4>
         <ul class="list-disc pl-10">
           <li>
-            Strong knowledge with <code>Object Oriented Programming</code> and
-            <code>Design Patterns</code>
-          </li>
-          <li>
-            Well experienced with scrum-methodology for daily standups and extraction of
-            deliverables by the end of the day.
-          </li>
-          <li>
-            Designing database that can handle millions of records applying the best optimized query
-            as possible.
-          </li>
-          <li>
-            Database to Caching flow which combines the records from the database to update the
-            records in the cached records.
-          </li>
-          <li>
-            Creating (API) Web Services for centralized server, a self-service response, and to
-            support most programming languages, handling SOAP/RESTful for one access with multiple
-            kinds of request.
-          </li>
-          <li>
-            Applying Security Protocol for all aspects such as server spamming, throthling, port
-            access control and password strength (sanitizers), CORS and many more.
-          </li>
-          <li>Strong knowledge with PHPUnit, Mocking Objects and Codeception.</li>
-        </ul>
-        <p><strong>Frontend Experience:</strong></p>
-        <ul class="list-disc pl-10">
-          <li>Knowledgeable with css</li>
-          <li>Strong knowledge in javascript (Vanilla / ES6) code styling</li>
-          <li>
-            Applying my knowledge with the latest trends we have these days such as new libraries or
-            frameworks
-          </li>
-        </ul>
-        <p><strong>IDE/Softwares/Packages that I’m using:</strong></p>
-        <ul class="list-disc pl-10">
-          <li>Preferred OS: <code>Mac Operating System</code></li>
-          <li>Versioning: <code>Git</code></li>
-          <li>
-            Continous Integrations:
+            <code>Incube8 Pte. Ltd.</code> <em>[December 2018 - Current]</em>
             <ul class="list-disc pl-10">
-              <li>Having small knowledge with <code>Jenkins</code> and <code>GitLab-CI</code></li>
-              <li>
-                Solid experience with <code>TravisCI</code> which I experienced in Open Source Development
-              </li>
+              <li><code>TODO...</code></li>
             </ul>
           </li>
           <li>
-            Text Editors:
+            <code>Plus65 Interactive Pte. Ltd.</code> <em>[Oct 3, 2016 - December 2018]</em>
             <ul class="list-disc pl-10">
-              <li><code>Sublime Text 2</code> or the latest <code>3</code></li>
-              <li><code>Atom Text Editor</code></li>
-            </ul>
-          </li>
-          <li>
-            Frameworks:
-            <ul class="list-disc pl-10">
-              <li>
-                Client
-                <ul class="list-disc pl-10">
-                  <li><code>VueJS</code> 2.x the latest</li>
-                  <li><code>Angular</code> 1.x.x the last version I’ve used</li>
-                  <li>
-                    Others:
-                    <ul class="list-disc pl-10">
-                      <li><code>jQuery</code></li>
-                      <li><code>Twitter Bootstrap 3 or 4</code></li>
-                      <li><code>Bulma</code></li>
-                      <li><code>ExtJS 1.x</code></li>
-                    </ul>
-                  </li>
-                </ul>
+              <li class="pb-3">
+                <code>ArrowMii</code> Project Lead
+                <p class="pl-5">
+                  <Badge roundedSize="full" type="info">
+                    <Info width="15" height="15" />
+                  </Badge>
+                  A web and mobile provider for Part Timers / Freelancers and for Enterprises
+                </p>
               </li>
-              <li>
-                Server
-                <ul class="list-disc pl-10">
-                  <li><code>Symfony</code> v1.4.x up until the last I handled 2.3.x</li>
-                  <li><code>Laravel</code> 4.2.x up until the latest which is 5.5.x</li>
-                  <li><code>Phalcon</code> 1.x.x up until 3.2.x</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <h4 class="mt-5 font-bold">Work History</h4>
-        <ul class="list-disc pl-10">
-          <li>
-            <code>Plus65 Interactive Pte. Ltd.</code> <em>[Oct 3, 2016 - Current]</em>
-            <ul class="list-disc pl-10">
-              <li><code>(confidential as of now)</code></li>
+              <ul class="list-disc pl-10">
+                <li>
+                  Architected the Database Schema and Code Structure
+                  <ul class="list-disc pl-10">
+                    <li>
+                      Implemented a RESTful API for both Part Timer Talent (PTT) and Admin Panel
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Centralized API for both Web and Mobile.
+                  <ul class="list-disc pl-10">
+                    <li>Implemented OAuth2 as authentication.</li>
+                  </ul>
+                </li>
+                <li>
+                  Implemented Push / In-App / Email; Notifications
+                  <ul class="list-disc pl-10">
+                    <li>Push under OneSignal as a Service.</li>
+                    <li>In-App using native implementation in Laravel.</li>
+                    <li>Email using Mailgun as a Service.</li>
+                  </ul>
+                </li>
+                <li>Handled Queue Server using Beanstalkd with Supervisord</li>
+                <li>
+                  Most Notable Implementations:
+                  <ul class="list-disc pl-10">
+                    <li>
+                      Matching Logic based on dynamic computation based on PTT's completion of each
+                      event.
+                    </li>
+                    <li>
+                      Rating calculation based on the event done and rates from an Enterprise
+                      (company).
+                    </li>
+                    <li>
+                      Calculated Broadcasting based on the activity of the user if active or
+                      passive.
+                    </li>
+                    <li>
+                      Event (Job) availability based on different scenarios as well on PTT's
+                      schedule and also the event and many more.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Others
+                  <ul class="list-disc pl-10">
+                    <li>Participating with the Frontend Side Implementation too if needed.</li>
+                    <li>Handled servers from Staging, UAT up until Production.</li>
+                    <li>Continuous Integration</li>
+                    <li>Unit Testing before auto Deploy using GitLabCI.</li>
+                    <li>Manageable Translations and Finder.</li>
+                    <li>Module based Implementation using "nwidart/laravel-modules" package.</li>
+                  </ul>
+                </li>
+              </ul>
             </ul>
           </li>
           <li>
@@ -171,3 +174,11 @@
     </div>
   </div>
 </div>
+
+<style>
+  @media print {
+    :global(header) {
+      display: none !important;
+    }
+  }
+</style>

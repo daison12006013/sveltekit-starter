@@ -164,6 +164,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        print: { raw: 'print' },
+      },
       maxHeight: {
         0: '0',
         xl: '36rem',
