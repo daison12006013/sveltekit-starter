@@ -1,20 +1,8 @@
 <script lang="ts">
-  import {
-    isDark,
-    isNotificationsMenuOpen,
-    isProfileMenuOpen,
-    isSideMenuOpen,
-    toggleTheme,
-    toggleSideMenu,
-    toggleNotificationsMenu,
-    toggleProfileMenu,
-    closeNotificationsMenu,
-    closeProfileMenu,
-  } from '$stores/menus'
-  import { clickOutside } from '$lib/IOEvents/click'
-  import { keydownEscape } from '$lib/IOEvents/keydown'
+  import { isSideMenuOpen, toggleSideMenu } from '$stores/menus'
   import List from '$icon/List/List.svelte'
   import X from '$icon/X/X.svelte'
+  import links from './Config/links.json'
 </script>
 
 <header class="py-4 shadow-md">
@@ -34,12 +22,11 @@
     </button>
     <div class="hidden md:block w-full">
       <ul class="flex justify-end items-center flex-shrink-0 space-x-10 text-white">
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/resume">Resumé</a>
-        </li>
+        {#each links as link, i}
+          <li>
+            <a href={link.url}>{link.name}</a>
+          </li>
+        {/each}
       </ul>
     </div>
   </div>

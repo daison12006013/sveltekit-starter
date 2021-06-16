@@ -2,6 +2,7 @@
   import { closeSideMenu, pageMenus, togglePageMenu } from '$stores/menus'
   import { page } from '$app/stores'
   import { goto } from '$app/navigation'
+  import links from './Config/links.json'
 
   const changeUrl = (url: string) => {
     closeSideMenu()
@@ -13,17 +14,6 @@
   $: if ($page.path) {
     activeMenu = $page.path
   }
-
-  export let links = [
-    {
-      name: 'Home',
-      url: '/',
-    },
-    {
-      name: 'Resumé',
-      url: '/resume',
-    },
-  ]
 </script>
 
 <div class="py-4 text-white">
