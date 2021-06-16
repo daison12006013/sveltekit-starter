@@ -1,5 +1,5 @@
 <script lang="ts">
-  import '$src/tailwind.css'
+  import '$lib/tailwind.css'
   import { fly } from 'svelte/transition'
   import { isSideMenuOpen, closeSideMenu } from '$stores/menus'
   import { clickOutside } from '$lib/IOEvents/click'
