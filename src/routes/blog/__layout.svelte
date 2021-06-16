@@ -1,8 +1,9 @@
 <script lang="ts">
   import '$src/tailwind.css'
+  import { fly } from 'svelte/transition'
   import { isSideMenuOpen, closeSideMenu } from '$stores/menus'
-  import { clickOutside } from '$lib/IOEvents/clickOutside'
-  import { keydownEscape } from '$lib/IOEvents/keydownEscape'
+  import { clickOutside } from '$lib/IOEvents/click'
+  import { keydownEscape } from '$lib/IOEvents/keydown'
   import SideBar from '$lib/Templates/Blog/SideBar.svelte'
   import Header from '$src/lib/Templates/Blog/Header.svelte'
 
@@ -37,7 +38,7 @@
   />
 </div>
 
-<div class="z-10 absolute w-full">
+<div class="z-20 absolute w-full">
   <Header />
 </div>
 
@@ -46,10 +47,11 @@
   <!-- Backdrop -->
   {#if $isSideMenuOpen}
     <div
-      class="fixed inset-0 z-10 flex items-end bg-black bg-opacity-10 sm:items-center sm:justify-center"
+      transition:fly={{ y: -800, x: -500, duration: 100 }}
+      class="fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"
     />
     <aside
-      class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto md:hidden"
+      class="fixed inset-y-0 z-20 flex-shrink-0 w-full mt-16 overflow-y-auto md:hidden"
       use:clickOutside={['nav-mobile-hamburger']}
       on:click-outside={closeSideMenu}
       use:keydownEscape

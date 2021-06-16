@@ -11,16 +11,14 @@
     closeNotificationsMenu,
     closeProfileMenu,
   } from '$stores/menus'
-  import { clickOutside } from '$lib/IOEvents/clickOutside'
-  import { keydownEscape } from '$lib/IOEvents/keydownEscape'
+  import { clickOutside } from '$lib/IOEvents/click'
+  import { keydownEscape } from '$lib/IOEvents/keydown'
   import List from '$icon/List/List.svelte'
   import X from '$icon/X/X.svelte'
 </script>
 
 <header class="py-4 shadow-md">
-  <div
-    class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300"
-  >
+  <div class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 ">
     <!-- Mobile hamburger -->
     <button
       id="nav-mobile-hamburger"

@@ -1,8 +1,8 @@
 <script lang="ts">
   import '$src/tailwind.css'
   import { isSideMenuOpen, closeSideMenu } from '$stores/menus'
-  import { clickOutside } from '$lib/IOEvents/clickOutside'
-  import { keydownEscape } from '$lib/IOEvents/keydownEscape'
+  import { clickOutside } from '$lib/IOEvents/click'
+  import { keydownEscape } from '$lib/IOEvents/keydown'
   import SideBar from '$lib/Templates/Admin/SideBar.svelte'
   import Header from '$lib/Templates/Admin/Header.svelte'
 </script>

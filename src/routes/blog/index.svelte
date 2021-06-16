@@ -15,7 +15,7 @@
       <p class="text-white text-3xl md:text-4xl lg:text-5xl 2xl:text-7xl">
         Hey! I'm <span class="font-bold">Daison!</span>
       </p>
-      <p class="opacity-10 text-red-100 text-4xl md:text-6xl lg:text-8xl 2xl:text-10xl font-bold">
+      <p class="opacity-30 text-gray-900 text-4xl md:text-6xl lg:text-8xl 2xl:text-10xl font-bold">
         A SOFTWARE ENGINEER
       </p>
     </div>

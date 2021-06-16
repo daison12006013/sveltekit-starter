@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { clickOutside } from '$lib/IOEvents/clickOutside'
-  import { keydownEscape } from '$lib/IOEvents/keydownEscape'
+  import { clickOutside } from '$lib/IOEvents/click'
+  import { keydownEscape } from '$lib/IOEvents/keydown'
 
   let isModalOpen = false
 
