@@ -1,6 +1,6 @@
 import preprocess from 'svelte-preprocess'
 import { resolve } from 'path'
-import node from '@sveltejs/adapter-vercel'
+import adapter from '@sveltejs/adapter-vercel' // import adapter from '@sveltejs/adapter-auto';
 
 let routeFolder = process.env.ROUTE_FOLDER
 
@@ -15,9 +15,13 @@ const config = {
   preprocess: preprocess(),
 
   kit: {
-    // hydrate the <div id="svelte"> element in src/app.html
-    target: '#svelte',
-    adapter: node(),
+    adapter: adapter(),
+
+    // Override http methods in the Todo forms
+    methodOverride: {
+      allowed: ['PATCH', 'DELETE'],
+    },
+
     files: {
       routes: `src/routes/${routeFolder}`,
     },

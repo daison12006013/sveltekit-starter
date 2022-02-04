@@ -13,8 +13,12 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-vercel": "^1.0.0-next.22",
+    "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.9.8",
+    "typescript": "^4.4.3",
+    "@sveltejs/adapter-vercel": "^1.0.0-next.22",
     "@tailwindcss/jit": "^0.1.18",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
@@ -25,16 +29,13 @@
     "postcss": "^8.2.15",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
-    "svelte": "^3.34.0",
     "svelte-bootstrap-icons": "^1.5.0",
-    "svelte-preprocess": "^4.0.0",
     "tailwindcss": "^2.1.2",
-    "tslib": "^2.0.0",
-    "typescript": "^4.0.0"
+    "tslib": "^2.0.0"
   },
   "type": "module",
   "dependencies": {
-    "@fontsource/fira-mono": "^4.2.2",
+    "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
     "cookie": "^0.4.1",
     "svelte-chartjs": "^1.0.1",

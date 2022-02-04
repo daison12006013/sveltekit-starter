@@ -1,16 +1,24 @@
-import type { Handle } from '@sveltejs/kit'
-import variables from './variables'
-import DefaultSvelteKit from './hooks/defaultSvelteKit'
-import LaravelSanctum from './hooks/laravelSanctum'
+import cookie from 'cookie';
+import { v4 as uuid } from '@lukeed/uuid';
+import type { Handle } from '@sveltejs/kit';
 
-export const handle: Handle = async ({ request, resolve }) => {
-  switch (variables.authentication.driver) {
-    case 'laravelSanctum':
-      return await LaravelSanctum({ request, resolve })
-      break
+export const handle: Handle = async ({ event, resolve }) => {
+	const cookies = cookie.parse(event.request.headers.get('cookie') || '');
+	event.locals.userid = cookies.userid || uuid();
 
-    // Add more...
-  }
+	const response = await resolve(event);
 
-  return await DefaultSvelteKit({ request, resolve })
-}
+	if (!cookies.userid) {
+		// if this is the first time the user has visited this app,
+		// set a cookie so that we recognise them when they return
+		response.headers.set(
+			'set-cookie',
+			cookie.serialize('userid', event.locals.userid, {
+				path: '/',
+				httpOnly: true
+			})
+		);
+	}
+
+	return response;
+};
