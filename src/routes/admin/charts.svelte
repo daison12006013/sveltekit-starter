@@ -27,7 +27,7 @@
         </svg>
         <span>{_i('Star this project on GitHub')}</span>
       </div>
-      <span>{_i('View more &RightArrow;')}</span>
+      <span>{_i('View more')} &RightArrow;</span>
     </a>
 
     <p class="mb-8 text-gray-600 dark:text-gray-400">

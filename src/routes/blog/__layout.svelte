@@ -34,7 +34,7 @@
     this={ParticlesComponent}
     id="tsparticles"
     options={particlesConfig}
-    customClass="h-screen"
+    class="h-screen"
   />
 </div>
 

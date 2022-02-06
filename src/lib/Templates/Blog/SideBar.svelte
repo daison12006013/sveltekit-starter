@@ -9,10 +9,10 @@
     goto(url)
   }
 
-  let activeMenu = $page.path
+  let activeMenu = $page.url
 
-  $: if ($page.path) {
-    activeMenu = $page.path
+  $: if ($page.url) {
+    activeMenu = $page.url
   }
 </script>
 
