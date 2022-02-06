@@ -1,6 +1,7 @@
 import preprocess from 'svelte-preprocess'
 import { resolve } from 'path'
-import adapter from '@sveltejs/adapter-vercel' // import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-auto'
+// import adapter from '@sveltejs/adapter-vercel'
 
 let routeFolder = process.env.ROUTE_FOLDER
 
@@ -25,10 +26,12 @@ const config = {
     files: {
       routes: `src/routes/${routeFolder}`,
     },
+
     vite: {
       resolve: {
         alias: {
           $src: resolve('./src'),
+          $lib: resolve('./src/lib'),
           $stores: resolve('./src/stores'),
           $assets: resolve('./src/assets'),
           $icon: resolve('./node_modules/svelte-bootstrap-icons/lib'),

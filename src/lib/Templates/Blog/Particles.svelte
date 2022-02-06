@@ -7,7 +7,6 @@
   export let options = {}
   export let url = ''
   export let id = 'tsparticles'
-  export let customClass: string
 
   const dispatch = createEventDispatcher()
   const particlesInitEvent = 'particlesInit'
@@ -45,4 +44,4 @@
   })
 </script>
 
-<div {id} class={customClass} />
+<div {id} class="{$$props.class}" />
