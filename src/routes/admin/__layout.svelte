@@ -1,10 +1,10 @@
 <script lang="ts">
   import '$lib/tailwind.css'
   import { isSideMenuOpen, closeSideMenu } from '$stores/menus'
-  import { clickOutside } from '$lib/IOEvents/click'
-  import { keydownEscape } from '$lib/IOEvents/keydown'
-  import SideBar from '$lib/Templates/Admin/SideBar.svelte'
-  import Header from '$lib/Templates/Admin/Header.svelte'
+  import { clickOutside } from '$lib/ioevents/click'
+  import { keydownEscape } from '$lib/ioevents/keydown'
+  import SideBar from '$lib/templates/Admin/SideBar.svelte'
+  import Header from '$lib/templates/Admin/Header.svelte'
 </script>
 
 <svelte:head>

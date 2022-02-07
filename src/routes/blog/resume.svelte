@@ -1,5 +1,5 @@
 <script>
-  import Badge from '$lib/Components/Badge.svelte'
+  import Badge from '$lib/components/Badge.svelte'
   import Info from '$icon/Info/Info.svelte'
 </script>
 
