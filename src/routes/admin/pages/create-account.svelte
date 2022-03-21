@@ -1,6 +1,6 @@
 <script lang="ts">
-  import createAccountOffice from '$lib/Templates/Admin/Images/create-account-office.jpeg'
-  import createAccountOfficeDark from '$lib/Templates/Admin/Images/create-account-office-dark.jpeg'
+  import createAccountOffice from '$lib/templates/Admin/Images/create-account-office.jpeg'
+  import createAccountOfficeDark from '$lib/templates/Admin/Images/create-account-office-dark.jpeg'
 
   const rands = ['', 'dark']
   const randCls = rands[Math.floor(Math.random() * rands.length)]

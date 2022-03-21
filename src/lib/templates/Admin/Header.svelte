@@ -10,8 +10,8 @@
     closeNotificationsMenu,
     closeProfileMenu,
   } from '$stores/menus'
-  import { clickOutside } from '$lib/IOEvents/click'
-  import { keydownEscape } from '$lib/IOEvents/keydown'
+  import { clickOutside } from '$lib/ioevents/click'
+  import { keydownEscape } from '$lib/ioevents/keydown'
 
   const withSearch = true
 </script>

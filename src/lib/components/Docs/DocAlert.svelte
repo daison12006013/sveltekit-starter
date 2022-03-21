@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Alert from '$lib/Components/Alert.svelte'
-  import Code from '$lib/Components/Code.svelte'
+  import Alert from '$lib/components/Alert.svelte'
+  import Code from '$lib/components/Code.svelte'
 </script>
 
 <span class="text-xl">Alerts</span>
@@ -15,7 +15,7 @@
 
 <h3 class="text-sm mt-2">Example:</h3>
 <Code language="svelte">
-  {"import Alert from '$lib/Components/Alert.svelte'"}<br /><br />
+  {"import Alert from '$lib/components/Alert.svelte'"}<br /><br />
   {'<Alert type="info" body="Hello World!" />'}<br />
   {'<Alert type="primary">A simple primary alert</Alert>'}
 </Code>

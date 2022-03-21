@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Badge from '$lib/Components/Badge.svelte'
-  import Code from '$lib/Components/Code.svelte'
+  import Badge from '$lib/components/Badge.svelte'
+  import Code from '$lib/components/Code.svelte'
 </script>
 
 <span class="text-xl">Badges</span>
@@ -19,7 +19,7 @@
 
 <h3 class="text-sm mt-2">Example:</h3>
 <Code language="svelte">
-  {"import Badge from '$lib/Components/Badge.svelte'"}<br /><br />
+  {"import Badge from '$lib/components/Badge.svelte'"}<br /><br />
   {'<Badge type="primary" body="primary" />'}<br />
   {'<Badge type="secondary" body="secondary" />'}<br />
   {'<Badge type="success" body="success" />'}<br />

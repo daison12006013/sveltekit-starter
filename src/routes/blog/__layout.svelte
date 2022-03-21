@@ -2,20 +2,20 @@
   import '$lib/tailwind.css'
   import { fly } from 'svelte/transition'
   import { isSideMenuOpen, closeSideMenu } from '$stores/menus'
-  import { clickOutside } from '$lib/IOEvents/click'
-  import { keydownEscape } from '$lib/IOEvents/keydown'
-  import SideBar from '$lib/Templates/Blog/SideBar.svelte'
+  import { clickOutside } from '$lib/ioevents/click'
+  import { keydownEscape } from '$lib/ioevents/keydown'
+  import SideBar from '$lib/templates/Blog/SideBar.svelte'
   import Header from '$src/lib/Templates/Blog/Header.svelte'
 
   // ------------------------------------------------------------
   // Particles JS
   // ------------------------------------------------------------
   import { onMount } from 'svelte'
-  import particlesConfig from '$lib/Templates/Blog/Config/particle.json'
+  import particlesConfig from '$lib/templates/Blog/Config/particle.json'
   let ParticlesComponent: any
 
   onMount(async () => {
-    const module = await import('$lib/Templates/Blog/Particles.svelte')
+    const module = await import('$lib/templates/Blog/Particles.svelte')
     ParticlesComponent = module.default
   })
   // ------------------------------------------------------------

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import forgotPasswordOffice from '$lib/Templates/Admin/Images/forgot-password-office.jpeg'
-  import forgotPasswordOfficeDark from '$lib/Templates/Admin/Images/forgot-password-office-dark.jpeg'
+  import forgotPasswordOffice from '$lib/templates/Admin/Images/forgot-password-office.jpeg'
+  import forgotPasswordOfficeDark from '$lib/templates/Admin/Images/forgot-password-office-dark.jpeg'
 
   const rands = ['', 'dark']
   const randCls = rands[Math.floor(Math.random() * rands.length)]

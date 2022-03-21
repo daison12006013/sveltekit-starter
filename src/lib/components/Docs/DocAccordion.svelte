@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Accordion from '$lib/Components/Accordion.svelte'
-  import AccordionItem from '$lib/Components/AccordionItem.svelte'
-  import Code from '$lib/Components/Code.svelte'
+  import Accordion from '$lib/components/Accordion.svelte'
+  import AccordionItem from '$lib/components/AccordionItem.svelte'
+  import Code from '$lib/components/Code.svelte'
 </script>
 
 <span class="text-xl">Accordion</span>
@@ -29,8 +29,8 @@
 
 <h3 class="text-sm mt-2">Example:</h3>
 <Code language="svelte">
-  {"import Accordion from '$lib/Components/Accordion.svelte'"}<br />
-  {"import AccordionItem from '$lib/Components/AccordionItem.svelte'"}<br /><br />
+  {"import Accordion from '$lib/components/Accordion.svelte'"}<br />
+  {"import AccordionItem from '$lib/components/AccordionItem.svelte'"}<br /><br />
   {'// can be (primary, secondary, success, danger, warning, info, light, dark)'}<br />
   {"let type = 'danger'"}<br />
   <br />
