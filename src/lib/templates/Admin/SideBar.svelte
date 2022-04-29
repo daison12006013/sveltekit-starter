@@ -5,7 +5,7 @@
 
   const appName = import.meta.env.VITE_APP_NAME
 
-  const changeLink = (link: any) => {
+  $: changeLink = (link: any) => {
     closeSideMenu()
     goto(link.url)
   }
