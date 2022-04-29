@@ -5,26 +5,25 @@
 
   const appName = import.meta.env.VITE_APP_NAME
 
-  const changeUrl = (url: string) => {
+  const changeLink = (link: any) => {
     closeSideMenu()
-    goto(url)
+    goto(link.url)
   }
 
-  const isMainLink = (link: any) => {
+  $: isMainLink = (link: any) => {
     if (! link.url) {
       return false
     }
     return link.url === activeUrl.pathname
   }
 
-  const isChildLink = (link: any) => {
+  $: isChildLink = (link: any) => {
     if (!link.url) {
       return false
     }
     return activeUrl.pathname.indexOf(link.url, 0) >= 0
   }
 
-  let activeUrl = $page.url
   $: activeUrl = $page.url
 
   export let withTitle = true
@@ -80,10 +79,10 @@
         'M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z',
       ],
       sublinks: [
-        { name: 'Login', url: '/pages/login' },
+        { name: 'Login', url: import.meta.env.VITE_LOGIN_PATH },
         { name: 'Create account', url: '/pages/create-account' },
         { name: 'Forgot password', url: '/pages/forgot-password' },
-        { name: '404', url: '/this-page-does-not-exists-at-all' },
+        { name: '404', url: '/pages/this-page-does-not-exists-at-all' },
       ],
     },
   ]
@@ -109,7 +108,7 @@
             href={link.url}
             on:click={(e) => {
               e.preventDefault()
-              changeUrl(link.url)
+              changeLink(link)
             }}
           >
             {#if link.svg}
