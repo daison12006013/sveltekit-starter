@@ -20,14 +20,21 @@ const config = {
 
     // Override http methods in the Todo forms
     methodOverride: {
-      allowed: ['PATCH', 'DELETE'],
+      allowed: ['PUT', 'PATCH', 'DELETE'],
     },
 
     files: {
       routes: `src/routes/${routeFolder}`,
+      hooks: `src/hooks/laravel-sanctum-fake-logged-in.ts`,
     },
 
     vite: {
+      // server: {
+      //   hmr: {
+      //     port: 3000,
+      //     clientPort: 3000,
+      //   }
+      // },
       resolve: {
         alias: {
           $src: resolve('./src'),

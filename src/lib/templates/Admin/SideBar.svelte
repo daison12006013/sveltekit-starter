@@ -1,18 +1,31 @@
 <script lang="ts">
-  import { closeSideMenu, pageMenus, togglePageMenu } from '$stores/menus'
+  import { closeSideMenu, pageMenus, togglePageMenu, toggleSideMenu } from '$stores/menus'
   import { page } from '$app/stores'
   import { goto } from '$app/navigation'
+
+  const appName = import.meta.env.VITE_APP_NAME
 
   const changeUrl = (url: string) => {
     closeSideMenu()
     goto(url)
   }
 
-  let activeMenu = $page.url
-
-  $: if ($page.url) {
-    activeMenu = $page.url
+  const isMainLink = (link: any) => {
+    if (! link.url) {
+      return false
+    }
+    return link.url === activeUrl.pathname
   }
+
+  const isChildLink = (link: any) => {
+    if (!link.url) {
+      return false
+    }
+    return activeUrl.pathname.indexOf(link.url, 0) >= 0
+  }
+
+  let activeUrl = $page.url
+  $: activeUrl = $page.url
 
   export let withTitle = true
   export let links = [
@@ -62,6 +75,7 @@
     { name: 'Tables', url: '/tables', svg: ['M4 6h16M4 10h16M4 14h16M4 18h16'] },
     {
       name: 'Pages',
+      url: '/pages',
       svg: [
         'M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z',
       ],
@@ -77,12 +91,12 @@
 
 <div class="py-4 text-gray-500 dark:text-gray-400">
   {#if withTitle}
-    <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="/"> Windmill </a>
+    <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="/">{appName}</a>
   {/if}
   <ul class="mt-6">
     {#each links as link, a}
       <li class="relative px-6 py-3">
-        {#if activeMenu == link.url}
+        {#if isMainLink(link)}
           <span
             class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
             aria-hidden="true"
@@ -91,9 +105,7 @@
 
         {#if !link.sublinks}
           <a
-            class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-            class:text-gray-800={activeMenu == link.url}
-            class:dark:text-gray-100={activeMenu == link.url}
+            class="{isMainLink(link) && 'text-gray-800 dark:text-gray-100'} inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
             href={link.url}
             on:click={(e) => {
               e.preventDefault()
@@ -120,8 +132,8 @@
           </a>
         {:else}
           <button
-            on:click={() => togglePageMenu(link.name)}
-            class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+          on:click={() => togglePageMenu(link.name)}
+            class="{isChildLink(link) && 'text-gray-800 dark:text-gray-100'} inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
             aria-haspopup="true"
           >
             <span class="inline-flex items-center">
@@ -149,7 +161,7 @@
               />
             </svg>
           </button>
-          {#if $pageMenus[link.name]}
+          {#if $pageMenus[link.name] || isChildLink(link)}
             <ul
               class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
               aria-label="submenu"
@@ -167,12 +179,4 @@
       </li>
     {/each}
   </ul>
-  <div class="px-6 my-6">
-    <button
-      class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-    >
-      Create account
-      <span class="ml-2" aria-hidden="true">+</span>
-    </button>
-  </div>
 </div>

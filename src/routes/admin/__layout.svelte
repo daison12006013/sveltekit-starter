@@ -1,10 +1,43 @@
+<script context="module">
+	export async function load({ session, url }) {
+    const isLoginPage = url.pathname.indexOf(import.meta.env.VITE_LOGIN_PATH) >= 0
+
+		if (!session?.user && !isLoginPage) {
+			return {
+				status: 302,
+				redirect: import.meta.env.VITE_LOGIN_PATH,
+			};
+		} else if (session?.user && isLoginPage) {
+      return {
+				status: 302,
+				redirect: '/',
+			};
+    }
+
+		return {
+			props: {
+				user: session.user,
+			},
+		};
+	}
+</script>
+
 <script lang="ts">
   import '$lib/tailwind.css'
-  import { isSideMenuOpen, closeSideMenu } from '$stores/menus'
+  import { isDark, isSideMenuOpen, closeSideMenu } from '$stores/menus'
   import { clickOutside } from '$lib/ioevents/click'
   import { keydownEscape } from '$lib/ioevents/keydown'
   import SideBar from '$lib/templates/Admin/SideBar.svelte'
   import Header from '$lib/templates/Admin/Header.svelte'
+  import { browser } from '$app/env'
+
+  if (browser && localStorage.theme === 'dark') {
+    isDark.update((v) => true)
+  } else {
+    isDark.update((v) => false)
+  }
+
+  export let user: any
 </script>
 
 <svelte:head>
@@ -12,9 +45,17 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+      localStorage.theme = 'dark'
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
 </svelte:head>
 
-<section id="body" class="dark">
+<section id="body">
   <div class="flex h-screen bg-gray-50 dark:bg-gray-900" class:overflow-hidden={$isSideMenuOpen}>
     <!-- Desktop sidebar -->
     <aside
@@ -41,7 +82,7 @@
     {/if}
 
     <div class="flex flex-col flex-1 w-full">
-      <Header />
+      <Header {user} />
 
       <slot />
     </div>

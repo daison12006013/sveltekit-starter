@@ -19,8 +19,11 @@ export const togglePageMenu = (name: string) => {
 }
 
 export const toggleTheme = () => {
-  window.document.getElementById('body').classList.toggle('dark')
-  isDark.update((v) => !v)
+  window.document.documentElement.classList.toggle('dark')
+  isDark.update((v) => {
+    localStorage.theme = v ? '' : 'dark'
+    return !v
+  })
 }
 
 export const toggleSideMenu = () => {

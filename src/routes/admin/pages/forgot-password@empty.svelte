@@ -1,12 +1,9 @@
 <script lang="ts">
   import forgotPasswordOffice from '$lib/templates/Admin/Images/forgot-password-office.jpeg'
   import forgotPasswordOfficeDark from '$lib/templates/Admin/Images/forgot-password-office-dark.jpeg'
-
-  const rands = ['', 'dark']
-  const randCls = rands[Math.floor(Math.random() * rands.length)]
 </script>
 
-<section id="body" class={randCls}>
+<section id="body">
   <div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
     <div
       class="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800"
