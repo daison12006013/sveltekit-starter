@@ -4,8 +4,8 @@ This project contains the lists of tools used
 
 - [SvelteKit](https://github.com/sveltejs/kit)
 - [TailwindCSS](https://tailwindcss.com/)
-- [Laravel Sanctum](https://laravel.com/docs/sanctum)
-  - To authenticate users thru cookie, mainly for SPA Applications
+- [Hooks](/src/hooks/)
+  - [Laravel Sanctum](https://laravel.com/docs/sanctum)
 
 ## DEMO
 
@@ -32,11 +32,11 @@ $> ROUTE_FOLDER=admin npm run dev
 - Separated components (inputs / tables, etc.)
 - Cypress Testing
 
+## Framework Specific Guidelines
+
+- [Setup Laravel Sanctum](/guides/laravel-sanctum.md)
+- ***You have backend framework? Add your sveltekit guidelines here!***
+
 ## Disclaimer
 
 - (Admin UI) Most of the design was based originally from [Estevan Maito's](https://github.com/estevanmaito/windmill-dashboard)
-
-## Framework Guides
-
-- [Setup Laravel Sanctum](/guides/laravel-sanctum.md)
-- ***Add yours here...***
