@@ -4,13 +4,13 @@ This project contains the lists of tools used
 
 - [SvelteKit](https://github.com/sveltejs/kit)
 - [TailwindCSS](https://tailwindcss.com/)
-- [Vite](https://vitejs.dev/)
+- [Laravel Sanctum](https://laravel.com/docs/sanctum)
+  - To authenticate users thru cookie, mainly for SPA Applications
 
 ## DEMO
 
 - [Admin](https://sveltekit-windmill-admin.vercel.app/)
 - [Blog / Personal Site](https://daison.vercel.app/)
-- Landing Page Demo (In Progress)
 
 ## Start the server and open the app in a new browser tab
 
@@ -23,17 +23,20 @@ $> ./make admin dev
 $> ROUTE_FOLDER=admin npm run dev
 ```
 
-## In Progress
+## Progress
 
 - Separated templates
-  - [ ] Landing Pages
-  - [ ] Blog
+  - [x] Blog
   - [x] Admin
   - [x] SvelteKit Demo
 - Separated components (inputs / tables, etc.)
 - Cypress Testing
-- (buggy as of the moment) Chart.JS
 
 ## Disclaimer
 
 - (Admin UI) Most of the design was based originally from [Estevan Maito's](https://github.com/estevanmaito/windmill-dashboard)
+
+## Framework Guides
+
+- [Setup Laravel Sanctum](/guides/laravel-sanctum.md)
+- ***Add yours here...***
