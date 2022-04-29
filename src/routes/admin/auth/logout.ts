@@ -6,7 +6,7 @@ export const get: RequestHandler = async (event) => {
 	const response = await api({
 		method: 'get',
 		resource: 'logout',
-        data: null,
+		data: null,
 		event,
 	});
 
@@ -19,13 +19,13 @@ export const get: RequestHandler = async (event) => {
 	if (response.status >= 200 && response.status <= 299) {
 		return {
 			status: 302,
-            headers: {
-                location: '/auth/login',
-                'set-cookie': cookie.serialize(import.meta.env.VITE_SESSION_NAME, '', {
+			headers: {
+				location: import.meta.env.VITE_LOGIN_PATH,
+				'set-cookie': cookie.serialize(import.meta.env.VITE_SESSION_NAME, '', {
 					path: "/",
 					maxAge: -1,
 				}),
-            },
+			},
 		};
 	}
 

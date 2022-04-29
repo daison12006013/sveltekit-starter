@@ -12,12 +12,12 @@ declare namespace App {
 		session: string;
 	}
 
-	interface Platform {}
+	interface Platform { }
 
 	interface Session {
 		// laravel sanctum
 		user: any;
 	}
 
-	interface Stuff {}
+	interface Stuff { }
 }

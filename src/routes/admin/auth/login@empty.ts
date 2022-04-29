@@ -24,9 +24,9 @@ export const post: RequestHandler = async (event) => {
 	if (response.status >= 200 && response.status <= 299) {
 		return {
 			status: 302,
-            headers: {
+			headers: {
 				location: '/',
-            },
+			},
 		};
 	}
 
