@@ -5,7 +5,7 @@
   import { clickOutside } from '$lib/ioevents/click'
   import { keydownEscape } from '$lib/ioevents/keydown'
   import SideBar from '$lib/templates/Blog/SideBar.svelte'
-  import Header from '$src/lib/Templates/Blog/Header.svelte'
+  import Header from '$src/lib/templates/Blog/Header.svelte'
 
   // ------------------------------------------------------------
   // Particles JS
