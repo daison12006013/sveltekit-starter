@@ -10,4 +10,4 @@
 #    ./make admin build
 #    ./make admin package
 #    ./make admin preview
-ROUTE_FOLDER=$1 $(which npm) run $2
+ROUTE_FOLDER=$1 $(which npm) run $2 ${@:3}
