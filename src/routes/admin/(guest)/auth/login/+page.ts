@@ -1,4 +1,4 @@
-import { api } from '$src/routes/_api';
+import { api } from '$src/routes/api';
 import type { RequestHandler } from '@sveltejs/kit';
 import cookie from 'cookie'
 

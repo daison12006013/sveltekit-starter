@@ -1,4 +1,4 @@
-import { api } from './_api';
+import { api } from './api';
 import type { RequestHandler } from '@sveltejs/kit';
 
 // GET /todos.json
