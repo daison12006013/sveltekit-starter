@@ -1,27 +1,3 @@
-<script context="module">
-	export async function load({ session, url }) {
-		const isLoginPage = url.pathname.indexOf(import.meta.env.VITE_LOGIN_PATH) >= 0
-
-		if (!session?.user && !isLoginPage) {
-			return {
-				status: 302,
-				redirect: import.meta.env.VITE_LOGIN_PATH
-			}
-		} else if (session?.user && isLoginPage) {
-			return {
-				status: 302,
-				redirect: '/'
-			}
-		}
-
-		return {
-			props: {
-				user: session.user
-			}
-		}
-	}
-</script>
-
 <script lang="ts">
 	import '$lib/tailwind.css'
 	import { isDark, isSideMenuOpen, closeSideMenu } from '$stores/menus'
@@ -37,7 +13,8 @@
 		isDark.update((v) => false)
 	}
 
-	export let user: any
+	export let data: any
+	const user = data.user
 </script>
 
 <svelte:head>

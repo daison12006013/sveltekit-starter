@@ -31,9 +31,3 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 	return response
 };
-
-export async function getSession({ locals }) {
-	return {
-		user: locals.user,
-	};
-}

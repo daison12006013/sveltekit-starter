@@ -1,10 +1,10 @@
-import type { RequestEvent } from "@sveltejs/kit/types/internal";
+import type { RequestEvent } from "@sveltejs/kit";
 
 interface ApiParams {
 	method: string;
-	event?: RequestEvent<Record<string, string>>;
+	event?: RequestEvent;
 	resource?: string;
-	data?: Record<string, unknown>;
+	data?: Record<string, unknown> | null;
 }
 
 export async function api(params: ApiParams) {
@@ -20,7 +20,7 @@ export async function api(params: ApiParams) {
 		headers: {
 			'content-type': 'application/json',
 			'accept': 'application/json',
-			'cookie': params.event.request.headers.get('cookie'),
+			'cookie': params?.event?.request?.headers?.get('cookie') as string,
 		},
 		body: params.data && JSON.stringify(params.data),
 	})

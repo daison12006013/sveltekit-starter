@@ -2,16 +2,34 @@ import preprocess from 'svelte-preprocess'
 import adapter from '@sveltejs/adapter-auto'
 // import adapter from '@sveltejs/adapter-vercel'
 
+// ---------------------------------------------------------
+// SvelteKit Starter: here we determine based on the ./make
+// runtime, where we're passing the ROUTE_FOLDER as the
+// input.
+// ---------------------------------------------------------
+
 let routeFolder = process.env.ROUTE_FOLDER
-let hooks = 'laravel-sanctum-fake-logged-in'
+let hooks = 'sveltekit-default'
 
-if (routeFolder === 'demo') {
-	hooks = 'sveltekit-default'
+switch (routeFolder) {
+	case 'admin':
+	case 'admin-in':
+		routeFolder = 'admin'
+		hooks = 'laravel-sanctum-fake-logged-in'
+		break
+
+	case 'admin-out':
+		routeFolder = 'admin'
+		hooks = 'laravel-sanctum-fake-logged-out'
+		break
+
+	case undefined:
+		routeFolder = 'demo'
+		hooks = 'sveltekit-default'
+		break
 }
 
-if (routeFolder == undefined) {
-	routeFolder = 'landing'
-}
+// ---------------------------------------------------------
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -22,14 +40,11 @@ const config = {
 	kit: {
 		adapter: adapter(),
 
-		// Override http methods in the Todo forms
-		methodOverride: {
-			allowed: ['PUT', 'PATCH', 'DELETE']
-		},
-
 		files: {
 			routes: `src/routes/${routeFolder}`,
-			hooks: `src/hooks/${hooks}.ts`
+			hooks: {
+				server: `src/hooks/${hooks}.ts`
+			}
 		}
 	}
 }
