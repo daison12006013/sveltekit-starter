@@ -1,36 +1,44 @@
 # SvelteKit Projects
 
-This project contains the lists of tools used
+The copy of this branch should have at least the `v1.0.0-next.480` of `@sveltejs/kit`
 
-- [SvelteKit](https://github.com/sveltejs/kit)
-- [TailwindCSS](https://tailwindcss.com/)
-- [Hooks](/src/hooks/)
-  - [Laravel Sanctum](https://laravel.com/docs/sanctum)
+## ./make and src/route.js
 
-## DEMO
-
-- [Admin](https://sveltekit-windmill-admin.vercel.app/)
-- [Blog / Personal Site](https://daison.vercel.app/)
-
-## Start the server and open the app in a new browser tab
-
-- To build only for admin
+Dynamic way of serving the `./src/routes/admin`, we've added a condition inside our `src/route.js` to pre-determine the folder we want.
 
 ```bash
+# this demonstrates a fake logged in
 $> ./make admin dev
+$> ./make admin-in dev
 
-# this is equivalent to
+# this demonstrates a fake logged out
+$> ./make admin-out dev
+
+# this connects to your laravel sanctum
+$> ./make admin-laravel-sanctum dev
+```
+
+The above command is similar to what it looks like below
+
+```bash
 $> ROUTE_FOLDER=admin npm run dev
 ```
 
-## Progress
+We've stored more route projects, such as the original `demo` of sveltekit and my own resumé `blog`
 
-- Separated templates
-  - [x] Blog
-  - [x] Admin
-  - [x] SvelteKit Demo
-- Separated components (inputs / tables, etc.)
-- Cypress Testing
+```bash
+# this demonstrates my bio and resumé
+$> ./make blog dev
+
+# this demonstrates the original sveltekit counter + todo
+$> ./make demo dev
+```
+
+## Demo
+
+- [Admin logged-in](https://sveltekit-windmill-admin.vercel.app/)
+- [Admin logged-out](https://sveltekit-windmill-admin-out.vercel.app/)
+- [Bio / Resumé](https://daison.vercel.app/)
 
 ## Framework Specific Guidelines
 
