@@ -1,4 +1,4 @@
-import { api } from '$src/routes/_api';
+import { api } from '$src/routes/api';
 import cookie, { parse } from 'cookie';
 import type { Handle } from '@sveltejs/kit';
 
@@ -29,16 +29,10 @@ export const handle: Handle = async ({ event, resolve }) => {
 			// set cookie in the client
 			response.headers.set(
 				'set-cookie',
-				sanctum.headers.get('set-cookie')
+				sanctum.headers.get('set-cookie') ?? ''
 			)
 		}
 	}
 
 	return response
 };
-
-export async function getSession({ locals }) {
-	return {
-		user: locals.user,
-	};
-}

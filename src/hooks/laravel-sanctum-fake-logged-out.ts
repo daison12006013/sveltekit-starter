@@ -6,9 +6,3 @@ export const handle: Handle = async ({ event, resolve }) => {
 	const response = await resolve(event)
 	return response
 };
-
-export async function getSession({ locals }) {
-	return {
-		user: locals.user,
-	};
-}
