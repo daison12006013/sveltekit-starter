@@ -5,9 +5,12 @@
 # As an example below:
 #    ./make demo dev
 #    ./make admin dev
+#    ./make admin-in dev
+#    ./make admin-out dev
 #    ./make blog dev
 #    ./make landing dev
+#
+# Others such as:
 #    ./make admin build
 #    ./make admin package
-#    ./make admin preview
 ROUTE_FOLDER=$1 $(which npm) run $2 ${@:3}

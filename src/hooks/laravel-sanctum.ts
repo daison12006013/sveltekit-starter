@@ -29,16 +29,10 @@ export const handle: Handle = async ({ event, resolve }) => {
 			// set cookie in the client
 			response.headers.set(
 				'set-cookie',
-				sanctum.headers.get('set-cookie')
+				sanctum.headers.get('set-cookie') ?? ''
 			)
 		}
 	}
 
 	return response
 };
-
-export async function getSession({ locals }) {
-	return {
-		user: locals.user,
-	};
-}

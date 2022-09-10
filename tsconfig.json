@@ -18,6 +18,7 @@
 		"strict": true,
 		"paths": {
 			"$src/*": ["src/*"],
+			"$lib/": ["src/lib/"],
 			"$lib/*": ["src/lib/*"],
 			"$stores/*": ["src/stores/*"],
 			"$assets/*": ["src/assets/*"],
