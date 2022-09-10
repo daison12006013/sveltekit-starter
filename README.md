@@ -2,20 +2,20 @@
 
 The copy of this branch should have at least the `v1.0.0-next.480` of `@sveltejs/kit`
 
-## ./make and src/route.js
+## ./run and src/route.js
 
 Dynamic way of serving the `./src/routes/admin`, we've added a condition inside our `src/route.js` to pre-determine the folder we want.
 
 ```bash
 # this demonstrates a fake logged in
-$> ./make admin dev
-$> ./make admin-in dev
+$> ./run admin dev
+$> ./run admin-in dev
 
 # this demonstrates a fake logged out
-$> ./make admin-out dev
+$> ./run admin-out dev
 
 # this connects to your laravel sanctum
-$> ./make admin-laravel-sanctum dev
+$> ./run admin-laravel-sanctum dev
 ```
 
 The above command is similar to what it looks like below
@@ -28,10 +28,27 @@ We've stored more route projects, such as the original `demo` of sveltekit and m
 
 ```bash
 # this demonstrates my bio and resumé
-$> ./make blog dev
+$> ./run blog dev
 
 # this demonstrates the original sveltekit counter + todo
-$> ./make demo dev
+$> ./run demo dev
+```
+
+## Playwright Test Cases
+
+When writing a test cases, rule of thumb is to name your tests with/by specific words, such as **"demo:"**
+
+```js
+// tests/demo.js
+test('demo: about page has expected h1', async ({ page }) => {
+ // ...
+});
+```
+
+Then you can run specific folders by executing it this way
+
+```bash
+./run demo test -- -g "demo:"
 ```
 
 ## Demo
