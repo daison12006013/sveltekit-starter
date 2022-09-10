@@ -1,5 +1,11 @@
 # SvelteKit Projects
 
+- [./run and src/route.js](#run-and-srcroutejs)
+- [Playwright Test Cases](#playwright-test-cases)
+- [Demo](#demo)
+- [Framework Specific Guidelines](#framework-specific-guidelines)
+- [Disclaimer](#disclaimer)
+
 The copy of this branch should have at least the `v1.0.0-next.480` of `@sveltejs/kit`
 
 ## ./run and src/route.js
