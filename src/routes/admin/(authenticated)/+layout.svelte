@@ -5,6 +5,7 @@
 	import { keydownEscape } from '$lib/ioevents/keydown'
 	import SideBar from '$lib/templates/Admin/SideBar.svelte'
 	import Header from '$lib/templates/Admin/Header.svelte'
+	import HtmlHead from '$src/routes/admin/html_head.svelte'
 	import { browser } from '$app/environment'
 
 	if (browser && localStorage.theme === 'dark') {
@@ -17,23 +18,7 @@
 	const user = data.user
 </script>
 
-<svelte:head>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-		rel="stylesheet"
-	/>
-	<script>
-		if (
-			localStorage.theme === 'dark' ||
-			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-		) {
-			document.documentElement.classList.add('dark')
-			localStorage.theme = 'dark'
-		} else {
-			document.documentElement.classList.remove('dark')
-		}
-	</script>
-</svelte:head>
+<HtmlHead {isDark} />
 
 <section id="body">
 	<div class="flex h-screen bg-gray-50 dark:bg-gray-900" class:overflow-hidden={$isSideMenuOpen}>
