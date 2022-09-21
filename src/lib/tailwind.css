@@ -3,37 +3,37 @@
 @tailwind utilities;
 
 .bg-blog {
-  @apply bg-blue-500;
+	@apply bg-blue-500;
 }
 
 .primary {
-  @apply text-purple-100 bg-purple-600;
+	@apply text-purple-100 bg-purple-600;
 }
 
 .secondary {
-  @apply text-gray-100 bg-gray-500;
+	@apply text-gray-100 bg-gray-500;
 }
 
 .success {
-  @apply text-green-100 bg-green-600;
+	@apply text-green-100 bg-green-600;
 }
 
 .danger {
-  @apply text-red-100 bg-red-600;
+	@apply text-red-100 bg-red-600;
 }
 
 .warning {
-  @apply text-orange-100 bg-orange-600;
+	@apply text-orange-100 bg-orange-600;
 }
 
 .info {
-  @apply text-blue-100 bg-blue-600;
+	@apply text-blue-100 bg-blue-600;
 }
 
 .light {
-  @apply text-gray-700 bg-white;
+	@apply text-gray-700 bg-white;
 }
 
 .dark {
-  @apply text-gray-100 bg-gray-700;
+	@apply text-gray-100 bg-gray-700;
 }

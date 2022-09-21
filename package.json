@@ -40,7 +40,9 @@
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
 		"@lukeed/uuid": "^2.0.0",
+		"@tailwindcss/typography": "^0.5.7",
 		"cookie": "^0.4.1",
+		"daisyui": "^2.27.0",
 		"svelte-chartjs": "^1.0.1",
 		"svelte-particles": "^2.2.4"
 	}

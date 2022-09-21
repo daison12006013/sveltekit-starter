@@ -25,5 +25,11 @@
 			"$icon/*": ["node_modules/svelte-bootstrap-icons/lib/*"]
 		}
 	},
-	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
+	"include": [
+		"src/**/*.d.ts",
+		"src/**/*.js",
+		"src/**/*.ts",
+		"src/**/*.svelte",
+		"start/route/route.js"
+	]
 }

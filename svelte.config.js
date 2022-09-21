@@ -1,4 +1,4 @@
-import route from './src/route.js'
+import route from './start/route.js'
 import preprocess from 'svelte-preprocess'
 import adapter from '@sveltejs/adapter-auto'
 // import adapter from '@sveltejs/adapter-vercel'
