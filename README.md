@@ -1,4 +1,5 @@
 # SvelteKit Projects
+redeploy from master
 
 The copy of this branch should have at least the `v1.0.0-next.480` of `@sveltejs/kit`
 
