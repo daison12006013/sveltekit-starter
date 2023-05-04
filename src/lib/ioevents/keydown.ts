@@ -1,6 +1,6 @@
 /** Dispatch event on keydown Escape of node */
-export function keydownEscape(node) {
-  const handle = (event) => {
+export function keydownEscape(node: any) {
+  const handle = (event: any) => {
     if (event.key === 'Escape') {
       node.dispatchEvent(new CustomEvent('keydown-escape', node))
     }

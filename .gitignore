@@ -1,3 +1,4 @@
+.vscode
 .DS_Store
 node_modules
 /build
@@ -11,3 +12,4 @@ node_modules
 /functions
 /.vercel_build_output
 /.idea
+/vite.config.js.timestamp*
