@@ -1,24 +1,23 @@
-import { sveltekit } from '@sveltejs/kit/vite'
-import { resolve } from 'path'
+import base from './start/vite/default.vite.config.js'
+import folder from './start/vite'
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	plugins: [sveltekit()],
+	// make the route folder config to be appened first
+	...folder,
 
-	// server: {
-	//   hmr: {
-	//     port: 3000,
-	//     clientPort: 3000,
-	//   }
-	// },
+	plugins: [...base.plugins],
+
+	test: {
+		include: ['src/**/*.{test,spec}.{js,ts}']
+	},
 
 	resolve: {
 		alias: {
-			$src: resolve('./src'),
-			// $lib: resolve('./src/lib'),
-			$stores: resolve('./src/stores'),
-			$assets: resolve('./src/assets'),
-			$icon: resolve('./node_modules/svelte-bootstrap-icons/lib')
+			...base.resolve.alias,
+
+			// append any aliases coming from the route folder config
+			...folder?.resolve?.alias
 		}
 	}
 }

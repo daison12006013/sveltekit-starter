@@ -1,0 +1,16 @@
+#!/bin/bash
+# How to?
+#    ./run {route-folder} {packages.scripts}
+#
+# As an example below:
+#    ./run demo dev
+#    ./run admin dev
+#    ./run admin-in dev
+#    ./run admin-out dev
+#    ./run blog dev
+#    ./run landing dev
+#
+# Others such as:
+#    ./run admin build
+#    ./run admin package
+ROUTE_FOLDER=$1 $(which npm) run $2 ${@:3}
