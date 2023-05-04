@@ -6,11 +6,11 @@
 - [Framework Specific Guidelines](#framework-specific-guidelines)
 - [Disclaimer](#disclaimer)
 
-The copy of this branch should have at least the `v1.0.0-next.480` of `@sveltejs/kit`
+The copy of this branch should have at least the `v1.15.10` of `@sveltejs/kit`
 
 ## ./run and src/route.js
 
-Dynamic way of serving the `./src/routes/admin`, we've added a condition inside our `src/route.js` to pre-determine the folder we want.
+Dynamic way of serving the `./src/routes/admin`, we've added a condition inside our `start/route.js` to pre-determine the folder we want.
 
 ```bash
 # this demonstrates a fake logged in
