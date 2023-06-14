@@ -71,3 +71,8 @@ Then you can run specific folders by executing it this way
 ## Disclaimer
 
 - (Admin UI) Most of the design was based originally from [Estevan Maito's](https://github.com/estevanmaito/windmill-dashboard)
+
+## Project Sponsors
+
+- https://formatterjson.com/
+- https://jsonlinter.com/
